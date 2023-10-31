@@ -1,0 +1,15 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+iris = sns.load_dataset("iris")
+sns.pairplot(iris, kind='scatter', markers='s')
+plt.suptitle("Pairwise Relationships (Scatter - Squares)")
+plt.show()
+sns.pairplot(iris, kind='kde', markers='o')
+plt.suptitle("Pairwise Relationships (KDE - Circles)")
+plt.show()
+sns.pairplot(iris, kind='hist', markers='D')
+plt.suptitle("Pairwise Relationships (Histograms - Diamonds)")
+plt.show()
+sns.pairplot(iris, kind='reg', markers='x')
+plt.suptitle("Pairwise Relationships (Regression - X)")
+plt.show()
